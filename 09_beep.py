@@ -1,6 +1,6 @@
 from machine import Pin, PWM
 from utime import sleep
-buzzer = PWM(Pin(2))
+buzzer = PWM(Pin(14))
 
 for j in range(4):
     for i in range(4):

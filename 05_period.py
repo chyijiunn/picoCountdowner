@@ -1,6 +1,6 @@
 from machine import Pin ,PWM ,Timer
 from utime import sleep
-servo = PWM(Pin(6))
+servo = PWM(Pin(0))
 servo.freq(50)
 tic = 100
 duty = 2000
@@ -9,7 +9,7 @@ def motor(tim):
     global duty 
     servo.duty_u16(duty)
     duty = duty + tic
-    if duty == 8000: duty = 2000
+    if duty == 8500: duty = 2000
     print(duty)
 
 tim = Timer(-1)
