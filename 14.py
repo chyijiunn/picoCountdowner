@@ -2,11 +2,11 @@ from machine import Pin ,PWM ,Timer
 from utime import sleep
 servo = PWM(Pin(0))
 buzzer = PWM(Pin(14))
-LED = Pin(1,Pin.OUT)#控制LED
+LED = Pin(1,Pin.OUT)
 servo.freq(50)
 LED.value(1)
 
-minset = 1
+minset = 1#改這裡就好，1 = 一分鐘倒數，60 = 倒數一小時，若要八小時呢？ 
 duty = 2000
 motorend = 8000
 tic = (motorend - duty) /minset /60 #每秒動多少
@@ -38,4 +38,3 @@ def motor(tim):
 
 tim = Timer(-1)
 tim.init(period=1000, mode=Timer.PERIODIC, callback=motor)
-

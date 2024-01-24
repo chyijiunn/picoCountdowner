@@ -13,4 +13,4 @@ def motor(tim):
     print(duty)
 
 tim = Timer(-1)
-tim.init(period=1000, mode=Timer.PERIODIC, callback=motor)
+tim.init(period=1000, mode=Timer.PERIODIC, callback=motor)#每 1 秒 , 呼喚 motor 一次

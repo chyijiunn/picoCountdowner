@@ -1,6 +1,6 @@
 from machine import Pin ,PWM ,Timer
 from utime import sleep
-servo = PWM(Pin(0)))
+servo = PWM(Pin(0))
 buzzer = PWM(Pin(14))
 
 servo.freq(50)
