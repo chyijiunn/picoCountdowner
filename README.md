@@ -1,6 +1,6 @@
 # picoCountdowner
 ## 完成品 
-![](/media/stepByStep/01.jpg)
+![](/media/stepByStep/32.jpg)
 ## Raspberry pico Pin
 1.
 1.
