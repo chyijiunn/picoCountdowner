@@ -43,13 +43,13 @@
 ![](/media/stepByStep/22.jpg) 
 1. 馬達黏上去
 ![](/media/stepByStep/23.jpg) 
-1. LED貼透明膠帶
+1. LED貼透明膠帶 
 ![](/media/stepByStep/24.jpg) 
-1. 剛剛的LED接線注意正負接上，也貼膠帶
+1. 剛剛的LED接線注意正負接上，也貼膠帶 
 ![](/media/stepByStep/25.jpg) 
-1. 盒子黏好
+1. 盒子黏好 
 ![](/media/stepByStep/26.jpg) 
-1. 喇叭塞進圓洞
+1. 喇叭塞進圓洞 
 ![](/media/stepByStep/27.jpg) 
 1. 測試一下有沒問題
 ![](/media/stepByStep/28.jpg) 
