@@ -1,6 +1,6 @@
 # picoCountdowner
 ## 完成品 
-![](/media/stepByStep/30.jpg)
+![](/media/stepByStep/34.jpg)
 ## Raspberry pico Pin
 1. pico 板腳位 
 ![](/media/stepByStep/01.jpg)
@@ -53,6 +53,15 @@
 ![](/media/stepByStep/27.jpg) 
 1. 測試一下有沒問題
 ![](/media/stepByStep/28.jpg) 
-1. 拿出半圓，貼上馬達轉動臂
-![](/media/stepByStep/29.jpg)  
-1. 調整馬達值，最後加上護蓋就完成
+1. 拿出半圓，貼上馬達轉動臂(短臂、非 一、十字型的)
+![](/media/stepByStep/29.jpg)
+1. 食指按住馬達、裝上半圓
+![](/media/stepByStep/30.jpg)
+1. 正面的樣子，儘量兩側水平，不行即調整馬達初始值
+![](/media/stepByStep/31.jpg)
+1. 取出護蓋連結條，貼上反光膠帶於內側、折彎黏貼處、凹向內側
+![](/media/stepByStep/32.jpg)
+1. 貼連結條於盤面下方
+![](/media/stepByStep/33.jpg)
+1. 黏加上護蓋就完成
+![](/media/stepByStep/34.jpg)
