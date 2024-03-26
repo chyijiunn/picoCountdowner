@@ -6,7 +6,7 @@ LED = Pin(1,Pin.OUT)
 servo.freq(50)
 LED.value(1)
 
-minset = 1#改這裡就好，1 = 一分鐘倒數，60 = 倒數一小時，若要八小時呢？ 
+minset = 0.1#改這裡就好，1 = 一分鐘倒數，60 = 倒數一小時，若要八小時呢？ 
 duty = 2000
 motorend = 8000
 tic = (motorend - duty) /minset /60 #每秒動多少
