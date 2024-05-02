@@ -6,7 +6,7 @@ LED = Pin(1,Pin.OUT)#控制LED
 servo.freq(50)
 LED.value(1)
 
-minset = 30
+minset = 0.12
 duty = 1900
 dutyini = 1900
 motorend = 8450
@@ -27,14 +27,14 @@ def motor(tim):
     servo.duty_u16(int(duty))
     duty = duty + tic
     if duty >= motorend:
+        beep()
         duty = dutyini
         servo.duty_u16(dutyini)
-        beep()
-        
+    '''
     restime = (motorend-duty)/tic
     restmin = int(restime // 60)
     restsec = int(restime % 60)
     print(restmin,':',restsec,duty)
-
+'''
 tim = Timer(-1)
 tim.init(period=1000, mode=Timer.PERIODIC, callback=motor)
