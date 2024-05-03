@@ -3,7 +3,7 @@ from utime import sleep
 from neopixel import NeoPixel
 import utime
 servo = PWM(Pin(0))
-buzzer = PWM(Pin(17))
+buzzer = PWM(Pin(14))
 strip = NeoPixel(Pin(16), 9)
 servo.freq(50)
 

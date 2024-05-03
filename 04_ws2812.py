@@ -1,8 +1,8 @@
 import time
 from machine import Pin
 from neopixel import NeoPixel
-
-strip = NeoPixel(Pin(17), 16)
+# pin (16) and LEDs (9)
+strip = NeoPixel(Pin(16), 9)
 
 strip.fill((72,209,204))
 strip.write()
