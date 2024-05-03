@@ -1,17 +1,32 @@
 from machine import Pin ,PWM ,Timer
 from utime import sleep
+from neopixel import NeoPixel
+
 servo = PWM(Pin(0))
 buzzer = PWM(Pin(14))
-LED = Pin(1,Pin.OUT)#控制LED
+strip = NeoPixel(Pin(16), 9)
 servo.freq(50)
-LED.value(1)
 
 minset = 0.12
 duty = 1900
 dutyini = 1900
 motorend = 8450
 tic = (motorend - duty) /minset /60 #每秒動多少
-
+strip.fill(0,0,0)
+strip.write()
+def lampstripe():
+    red = 255,0,0
+    green = 0,255,0
+    blue= 0,0,255
+    colors = [red, green, blue]
+    mydelay = 0.1
+    while True:
+        for j in colors:
+            for i in range(8,0,-1):
+                strip[i] = (j)
+                sleep(mydelay)
+                strip.write()
+                
 def beep():
     for j in range(2):
         for i in range(4):
@@ -30,11 +45,7 @@ def motor(tim):
         beep()
         duty = dutyini
         servo.duty_u16(dutyini)
-    '''
-    restime = (motorend-duty)/tic
-    restmin = int(restime // 60)
-    restsec = int(restime % 60)
-    print(restmin,':',restsec,duty)
-'''
+        lampstripe()
+
 tim = Timer(-1)
 tim.init(period=1000, mode=Timer.PERIODIC, callback=motor)
