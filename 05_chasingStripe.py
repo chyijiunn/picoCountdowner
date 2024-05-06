@@ -9,10 +9,10 @@ red = 255,0,0
 green = 0,255,0
 blue= 0,0,255
 colors = [red, green, blue]
-mydelay = 0.1
+mydelay = 0.01
 while True:
     for j in colors:
-        for i in range(8,0,-1):
+        for i in range(8):
             strip[i] = (j)
             time.sleep(mydelay)
             strip.write()

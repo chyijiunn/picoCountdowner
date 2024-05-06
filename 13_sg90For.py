@@ -12,5 +12,5 @@ while True:
         servo.duty_u16(1800+100*i)#每次都會增加 100，做 64 次
         sleep(0.1)
         
-    servo.duty_u16(8200)
+    servo.duty_u16(8400)
     sleep(0.6)
