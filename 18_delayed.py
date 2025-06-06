@@ -10,9 +10,9 @@ servo.freq(50)
 strip.fill((255,255,255))
 strip.write()
 
-minset = 30
-duty = 2000
-motorend = 8400
+minset = 1
+duty = 1600
+motorend = 8200
 
 tic = int((motorend - duty) /minset /60) #每秒動多少
 
@@ -29,7 +29,7 @@ def beep():
 while 1:
     for i in range(duty , motorend , tic):
         servo.duty_u16(int(i))
-        strip.fill((255,int(255-i/30),int(255-i/30)))
+        strip.fill((255,int(255-(i/33)),int(255-(i/33))))
         strip.write()
         sleep(1)
     beep()

@@ -1,16 +1,18 @@
 from machine import Pin ,PWM ,Timer
 from utime import sleep
+from neopixel import NeoPixel
 import _thread
 servo = PWM(Pin(0))
 buzzer = PWM(Pin(17))
-LED = Pin(1,Pin.OUT)
+strip = NeoPixel(Pin(16), 9)
 servo.freq(50)
-LED.value(1)
+strip.fill((0,255,0))
+strip.write()
 
-minset = 5 #改這裡就好，1 = 一分鐘倒數，60 = 倒數一小時，若要八小時呢？ 
+minset = 30 #改這裡就好，1 = 一分鐘倒數，60 = 倒數一小時，若要八小時呢？ 
 duty = 1600
 motorend = 8200
-duration = 0.05#每2秒動一次
+duration = 0.05#每多少秒動一次
 tic = ((motorend - duty) /minset /60 )*duration
 
 def beep():
@@ -27,6 +29,9 @@ def motor(tim):
     global duty
     servo.duty_u16(int(duty))
     duty = duty + tic
+    ledshift = int(duty/33)
+    strip.fill((ledshift,255-ledshift,0))
+    strip.write()
     if duty >= motorend:
         servo.duty_u16(1600)
         duty = 1600

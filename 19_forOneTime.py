@@ -11,8 +11,8 @@ strip.fill((205,55,155))
 strip.write()
 
 minset = 1
-duty = 2000
-motorend = 8400
+duty = 1600
+motorend = 8200
 
 tic = int((motorend - duty) /minset /60) #每秒動多少
 lightTic = (motorend - duty)/minset/60/255

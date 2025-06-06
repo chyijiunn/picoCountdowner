@@ -5,7 +5,7 @@ buzzer = PWM(Pin(14))
 
 servo.freq(50)
 tic = 100
-duty = 2000
+duty = 1600
 
 def beep():
     for j in range(4):
@@ -21,8 +21,8 @@ def motor(tim):
     global duty 
     servo.duty_u16(duty)
     duty = duty + tic
-    if duty == 8000:
-        duty = 2000
+    if duty == 8200:
+        duty = 1600
         beep()
     print(duty)
 
