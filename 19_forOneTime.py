@@ -1,3 +1,4 @@
+#只執行一次，使用 for 完成
 from machine import Pin ,PWM ,Timer
 from utime import sleep
 from neopixel import NeoPixel

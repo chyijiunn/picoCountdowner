@@ -1,3 +1,4 @@
+# 加入燈條於 motor function 下
 from machine import Pin ,PWM ,Timer
 from utime import sleep
 from neopixel import NeoPixel

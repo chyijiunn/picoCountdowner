@@ -1,3 +1,4 @@
+#使用 while 不斷輪迴
 from machine import Pin ,PWM ,Timer
 from utime import sleep
 from neopixel import NeoPixel

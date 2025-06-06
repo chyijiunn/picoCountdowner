@@ -1,10 +1,10 @@
 import time
 from machine import Pin
 from neopixel import NeoPixel
-# pin (16) and LEDs (9)
+# 腳位 16 & 9顆 LEDs
 strip = NeoPixel(Pin(16), 9)
 
-strip.fill((255,0,0))
+strip.fill((255,0,0))#R,G,B
 strip.write()
 time.sleep(0.5)
 

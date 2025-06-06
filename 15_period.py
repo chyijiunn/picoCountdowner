@@ -1,3 +1,4 @@
+#call function
 from machine import Pin ,PWM ,Timer
 from utime import sleep
 servo = PWM(Pin(0))

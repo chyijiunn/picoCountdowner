@@ -5,10 +5,10 @@ from neopixel import NeoPixel
 strip = NeoPixel(Pin(16), 9)
 potentiometer = ADC(Pin(26))
 # Color
-red = 255,0,0
-green = 0,255,0
-blue= 0,0,255
-colors = [red, green, blue]
+c1 = 255,0,0
+c2 = 0,255,255
+c3 = 255,255,255
+colors = [c1, c2, c3]
 mydelay = 0.1
 while True:
     for j in colors:
@@ -16,3 +16,4 @@ while True:
             strip[i] = (j)
             time.sleep(mydelay)
             strip.write()
+
