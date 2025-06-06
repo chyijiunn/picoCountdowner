@@ -10,10 +10,10 @@ servo.freq(50)
 strip.fill((0,255,0))
 strip.write()
 
-minset = 30 #改這裡就好，1 = 一分鐘倒數，60 = 倒數一小時，若要八小時呢？ 
+minset = 0.1 #改這裡就好，1 = 一分鐘倒數，60 = 倒數一小時，若要八小時呢？ 
 duty = 1600
 motorend = 8200
-duration = 0.05#每多少秒動一次
+duration = 0.05 #每多少秒動一次
 tic = ((motorend - duty) /minset /60 )*duration
 
 def beep():
@@ -36,7 +36,7 @@ def motor(tim):
     if duty >= motorend:
         servo.duty_u16(1600)
         duty = 1600
-        #beep()
+        beep()
 
 tim = Timer(-1)
 tim.init(period=int(duration*1000), mode=Timer.PERIODIC, callback=motor)
