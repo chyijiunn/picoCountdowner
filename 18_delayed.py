@@ -31,5 +31,5 @@ while 1:
         servo.duty_u16(int(i))
         strip.fill((255,int(255-(i/33)),int(255-(i/33))))
         strip.write()
-        sleep(1)
+        sleep(1)#這 delay 造成時間上不準
     beep()
