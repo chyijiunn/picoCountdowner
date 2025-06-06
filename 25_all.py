@@ -7,7 +7,7 @@ servo = PWM(Pin(0))
 buzzer = PWM(Pin(14))
 strip = NeoPixel(Pin(16), 9)
 servo.freq(50)
-strip.fill((0,255,0))
+strip.fill((0,0,255))
 strip.write()
 
 minset = 1 #改這裡就好，1 = 一分鐘倒數，60 = 倒數一小時，若要八小時呢？ 
@@ -37,7 +37,7 @@ def motor(tim):
     servo.duty_u16(int(duty))
     duty = duty + tic
     ledshift = int(duty/33)
-    strip.fill((ledshift,255-ledshift,0))
+    strip.fill((ledshift,0,255-ledshift))
     strip.write()
     if duty >= motorend:
         servo.duty_u16(1600)
