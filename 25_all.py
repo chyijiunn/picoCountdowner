@@ -10,21 +10,27 @@ servo.freq(50)
 strip.fill((0,255,0))
 strip.write()
 
-minset = 0.1 #改這裡就好，1 = 一分鐘倒數，60 = 倒數一小時，若要八小時呢？ 
+minset = 1 #改這裡就好，1 = 一分鐘倒數，60 = 倒數一小時，若要八小時呢？ 
 duty = 1600
 motorend = 8200
-duration = 0.05 #每多少秒動一次
+duration = 1 #每多少秒動一次
 tic = ((motorend - duty) /minset /60 )*duration
 
 def beep():
-    for j in range(2):
-        for i in range(4):
-            buzzer.freq(4000+i*100)
+    for j in range(8):
+        for i in range(5):
+            buzzer.freq(3000-i*500)
+            buzzer.duty_u16(10000)
+            sleep(0.03)
+            buzzer.duty_u16(0)
+            sleep(0.02)
+        for i in range(5):
+            buzzer.freq(5000+i*1000)
             buzzer.duty_u16(20000)
             sleep(0.03)
             buzzer.duty_u16(0)
-            sleep(0.005)
-        sleep(0.05)
+            sleep(0.02)
+        sleep(0.02)
 
 def motor(tim):
     global duty
