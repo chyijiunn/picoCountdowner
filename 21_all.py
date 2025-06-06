@@ -1,10 +1,10 @@
-# 加入燈條於 motor function 下
+# teacherVersion 加入燈條於 motor function 下
 from machine import Pin ,PWM ,Timer
 from utime import sleep
 from neopixel import NeoPixel
 import _thread
 servo = PWM(Pin(0))
-buzzer = PWM(Pin(17))
+buzzer = PWM(Pin(14))
 strip = NeoPixel(Pin(16), 9)
 servo.freq(50)
 strip.fill((0,255,0))

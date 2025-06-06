@@ -1,12 +1,11 @@
-# 避免 delayed 的 Timer 用法
+# 避免 delayed 的 Timer 用法 without LED
 from machine import Pin ,PWM ,Timer
 from utime import sleep
 import _thread
 servo = PWM(Pin(0))
-buzzer = PWM(Pin(17))
-LED = Pin(1,Pin.OUT)
+buzzer = PWM(Pin(14))
 servo.freq(50)
-LED.value(1)
+
 
 minset = 1 #改這裡就好，1 = 一分鐘倒數，60 = 倒數一小時，若要八小時呢？ 
 duty = 1600

@@ -1,4 +1,4 @@
-# 單一 LED 學生版的終結版
+# singleLED 學生版的終結版
 from machine import Pin ,PWM ,Timer
 from utime import sleep
 servo = PWM(Pin(0))
