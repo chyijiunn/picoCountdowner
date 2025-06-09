@@ -14,7 +14,7 @@ time.sleep(0.5)
 
 a = []
 
-for j in range(3):
+for j in range(8):
     a.clear()
     for i in range(3):
         a.append(random.randint(0,255))
