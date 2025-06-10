@@ -1,6 +1,4 @@
 from machine import Pin
-from utime import sleep
-
 LED = Pin(25,Pin.OUT)
 
 LED.value(1)
