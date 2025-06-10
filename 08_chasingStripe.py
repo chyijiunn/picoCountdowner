@@ -12,7 +12,7 @@ colors = [c1, c2, c3]
 mydelay = 0.1
 while True:
     for j in colors:
-        for i in range(8):
+        for i in range(9):
             strip[i] = (j)
             time.sleep(mydelay)
             strip.write()
